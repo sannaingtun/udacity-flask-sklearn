@@ -14,6 +14,9 @@ Building a CI/CD Pipeline to deploy package to Azure WebApp using Azure Pipeline
 
 <TODO: Instructions for running the Python project. How could a user with no context run this project without asking you for any help. Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
+- Run `commands.sh` to deploy a webapp on Azure
+  Change the webapp name you want `az webapp up -n <your-appservice>`
+  ![commands](/Screenshots/commands.png)
 - Project running on Azure App Service
   [Open this URL](https://flask-sklearn-san.azurewebsites.net/)
   ![Running WebApp](/Screenshots/webapp-running.png)
@@ -44,6 +47,23 @@ Port: 443
 - Output of streamed log files from deployed application
   [Log File](/Logs/2022_09_20_lw0sdlwk0001TB_default_docker.log)
   >
+
+## Load Testing using Locust
+
+We can use locust to do a load test against our application.
+In this example we will do a load test against the app running in azure.
+
+Install locust and then run locust on command line:
+
+```
+pip install locust
+locust
+```
+
+![Install](Screenshots/locust-1.png)
+Open the url http://localhost:8089. Enter the total number of users to simulate, spawn rate, set the host to https://flask-sklearn-san.azurewebsites.net//, and click Start Swarming:
+![Statistics](Screenshots/locust-2.png)
+![Charts](Screenshots/locust-3.png)
 
 ## Enhancements
 
