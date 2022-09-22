@@ -24,6 +24,7 @@ Building a CI/CD Pipeline to deploy package to Azure WebApp using Azure Pipeline
   ![Test Result](/Screenshots/make-all-2.png)
 - Output of a test run
   ![Test run output](/Screenshots/github-test-pass-on-readme.png)
+  [![Python application test with Github Actions](https://github.com/sannaingtun/udacity-flask-sklearn/actions/workflows/main.yml/badge.svg)](https://github.com/sannaingtun/udacity-flask-sklearn/actions/workflows/main.yml)
 - Successful deploy of the project in Azure Pipelines. [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
   ![Deployment Result](/Screenshots/pipeline-result-list.png)
 
